@@ -1,5 +1,5 @@
 " 设置leader
-let mapleader=","
+let mapleader=" "
 
 " 开启真彩色
 set termguicolors

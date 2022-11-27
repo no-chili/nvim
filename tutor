@@ -1,0 +1,150 @@
+这是一个使用nvim创建的文件
+:q是退出
+:q!是强制退出，不保留更改
+:qw退出并保存对文件的更改
+普通模式下使用u执行撤回操作
+i切换普通模式到编辑模式Esc退出编辑
+x删除光标所在位置的字符
+A在一行的末尾追加
+d为delete 删除--使用dw可以删除一个单词 dd可以删除光标所在行 d加上下可以删除上一行或者下一行 2dd意思为删除两行
+w定位到一个单词的开头
+e定位到一个单词的末尾
+
+a i o A I O  插入模式
+a:当前单词的末尾
+A:当前行的末尾
+i:光标当前位置
+I:光标当前行开头
+o:当前行的下一行开始
+O:当前行的上一行
+
+v:进入可视化模式
+
+ctrl+h
+ctrl+w
+ctrl+
+ctrl+[ 快速进入normal模式
+gi 快速回到上一次编辑的位置
+
+w/W 快速移动到下一个单词的开头 大写以空白符分割
+e/E 快速与移动到单词末尾  大写以空白符分割
+b/B 快速移动到前一个单词的开头
+
+f{char}快速找到 行间字符   ;下一个 ，上一个
+0移动到行首
+$移动到行尾
+
+gg快速移动到文件的开头
+G快速移动到文件的末尾
+ctrl+o回到光标上次编辑的位置
+
+H/M/L 移动到屏幕的开头/中间/末尾
+
+ctrl+u/ctrl+f 上一页/下一页
+
+zz把当前行移动到屏幕的中间
+
+快速删除操作
+dd快速删除当前行
+dw快速删除当前单词
+x删除字符
+4x删除4个字符
+
+快速修改
+r修改当前字符 
+s修改当前字符并进入插入模式
+c删除并进入插入模式  C删除整行并进入插入模式
+都是可以搭配数字使用[number]r使用
+
+快速查询
+/或者？向前或者向后搜索
+n/N或者*/#跳转到前一个或者后一个匹配
+
+快速搜索替换
+:%s/self/this/g
+:%s/    self(要替换的内容) /  +  （要换成的） /   条件
+g全局
+c是否需要确认
+n报告匹配到的次数
+
+多文件操作
+ii:ls 查看缓冲区中打开的文件
+:b 切换当前打开的文件 :b 文件名
+分割屏幕
+:sp水平分割屏幕（ctrl+w+s）  :vs垂直分割(ctrl+w+v)
+每一个窗iii口可以无限分割（屏幕足够大）
+移动屏幕 ctrl+w循环移动
+ctrl+w+l移动屏幕到左边 ctrl+w+r移动到右边
+ctrl+w+hjkl移动光标到其他屏幕
+
+tabs（相当与工作区）
+tabnew 打开新的tab
+gt切换tab
+
+Text Object
+[number]<command>[taxt object]
+number表示次数
+command表示要操作的事情 d删除 c改变 y复制
+text object表示要操作的对象 w单词 s句子 p单词
+
+ command<a/i>匹配字符
+ a 匹配包括空格
+ i 匹配时不包括空格
+
+ 复制粘贴
+ normal模式 y p 复制粘贴 d p 剪贴
+ yiw复制一个单词
+ yy复制一行
+
+寄存器
+:reg查看寄存器容
+默认是使用无名寄存器
+寄存器名 + 操作
+将内容存到寄存器里面
+ayy   byy 分别在a b 寄存器里面存了不同的内容使用时可以选择
+:set clipboard=unnamedplus直接同步系统剪贴板
+
+宏（macro）
+使用q来录制，再次q结束录制
+q{register}选择要保存的寄存器
+@{register}回放寄存器中保存的一系列命令
+
+如何在命令行执行normal命令
+选择好文本 : normal normal命令
+
+补全
+ctrl+n ctrl+p 补全单词
+ctrl+x ctrl+f 补全文件名 
+ctrl+x ctrl+o 补全文件名
+
+更换配色
+:colorsscheme 显示当前配色
+:colorsscheme ctrl+d 显示所有配色
+:colorsscheme 配色名 就可以修改配色
+
+命令行的指令
+:w保存
+:wq保存退出
+:e!不更改退出
+
+配置vim
+映射 inorenap 新命令 原来的命令
+
+:h optionlst 打印所有配置项xx
+/ 搜索
+
+映射
+normal映射 
+:nmap 开启映射
+:unnmap 关闭映射
+选择模式
+:vmap
+:unvmap 
+插入模式
+:imap
+:unimap
+
+非递归映射 （这些命令不会递归解释）
+:nnoremap
+:inoremap
+:vnoremap
