@@ -35,7 +35,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'brooth/far.vim' " 查找替换 :Far 目标词 替换词 路径         :Fardo执行
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
-
 " 使用配色主题
 colorscheme neodark
 " 默认开启nerdtree
