@@ -1,0 +1,13 @@
+              packer.nvim - finished in 120.354s
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ✗ Failed to install brooth/far.vim
+ ✗ Failed to install kyazdani42/nvim-web-devicons
+ ✗ Failed to update KeitaNakamura/neodark.vim
+ ✗ Failed to update Yggdroot/indentLine
+ ✗ Failed to update kyazdani42/nvim-tree.lua
+
+ Press 'q' to quit
+ Press '<CR>' to show more info
+ Press 'd' to show the diff
+ Press 'r' to revert an update
+ Press 'R' to retry failed operations

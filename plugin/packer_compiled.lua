@@ -74,10 +74,60 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["far.vim"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/far.vim",
+    url = "https://github.com/brooth/far.vim"
+  },
+  indentLine = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/indentLine",
+    url = "https://github.com/Yggdroot/indentLine"
+  },
+  ["neodark.vim"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/neodark.vim",
+    url = "https://github.com/KeitaNakamura/neodark.vim"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/no-chili/.local/share/nvim/site/pack/packer/start/vim-startify",
+    url = "https://github.com/mhinz/vim-startify"
   }
 }
 
