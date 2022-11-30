@@ -22,6 +22,9 @@ map("n", "<A-d>", "9j", opt)
 --insert模式下跳转到行首/行尾
 map("i", "<A-h>", "<ESC>I", opt)
 map("i", "<A-l>", "<ESC>A", opt)
+-- 
+map("n", "<A-a>", "A<ESC>", opt)
+map("n", "<A-i>", "I<ESC>", opt)
 
 -- Telescope
 -- 查找文件

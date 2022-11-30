@@ -10,7 +10,11 @@ packer.startup({function(use)
   use ('kyazdani42/nvim-web-devicons')
   use ('nvim-lua/plenary.nvim')
   use ({ "kyazdani42/nvim-tree.lua"})
-  use ({'nvim-telescope/telescope.nvim', tag = '0.1.0'})
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
 end,
 config = {
     -- 并发数限制
