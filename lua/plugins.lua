@@ -7,9 +7,12 @@ packer.startup({function(use)
   use ('vim-airline/vim-airline') 
   use ('vim-airline/vim-airline-themes') 
   use ('brooth/far.vim')
-  use ('kyazdani42/nvim-web-devicons')
   use ('nvim-lua/plenary.nvim')
-  use ({ "kyazdani42/nvim-tree.lua"})
+-- nvim-tree (新增)
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
       -- or                            , branch = '0.1.x',
