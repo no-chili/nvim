@@ -1,3 +1,9 @@
+ -- 开启 Folding 模块
+  vim.opt.foldmethod = "expr"
+  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- 默认不要折叠
+-- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
+  vim.opt.foldlevel = 99
 local packer= require('packer')
 packer.startup({function(use)
   use ('wbthomason/packer.nvim')
@@ -8,16 +14,33 @@ packer.startup({function(use)
   use ('vim-airline/vim-airline-themes') 
   use ('brooth/far.vim')
   use ('nvim-lua/plenary.nvim')
--- nvim-tree (新增)
-    use {
+  use("glepnir/dashboard-nvim")
+  use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons'
-    }
+   }
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
       -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+   --------------------- LSP --------------------
+  use("williamboman/nvim-lsp-installer")
+   -- Lspconfig
+ -- 补全引擎
+        use("hrsh7th/nvim-cmp")
+        -- snippet 引擎
+        use("hrsh7th/vim-vsnip")
+        -- 补全源
+        use("hrsh7th/cmp-vsnip")
+        use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+        use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+        use("hrsh7th/cmp-path") -- { name = 'path' }
+        use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+
+        -- 常见编程语言代码段
+        use("rafamadriz/friendly-snippets") use({ "neovim/nvim-lspconfig" })
 end,
 config = {
     -- 并发数限制
